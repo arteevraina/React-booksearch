@@ -10,10 +10,10 @@ class Search extends React.Component {
         }
         this.bind = this.handleClick.bind(this)
         this.bind = this.handleChange.bind(this)
-        
     }
 
-    handleClick() {
+    handleClick = (event) => {
+        event.preventDefault()
         const apiPath = "https://www.googleapis.com/books/v1/volumes?q="
         const apiKey = "AIzaSyBgLSwNtArchOjB__1-kqOoqrUt1d_AwXA"
         var part = "&key="
@@ -28,20 +28,21 @@ class Search extends React.Component {
             })
     }
 
-    handleChange(event) {
+    handleChange = (event) => {
         this.setState({
             query: event.target.value
         })
     }
-
     render(){
     return(
         <div className="container">
             <h1>Book Search App</h1>
-            <form className="form-group">
+            <form>
+            <div className="form-group">
                 <input type="text" className="form-control" placeholder="Search for Books" onChange={this.handleChange}/>
                 <br/>
                 <button type="submit" className="btn btn-success" onClick={this.handleClick}>Search</button>
+            </div>
             </form>
         </div>
     )}
