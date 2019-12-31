@@ -1,6 +1,7 @@
 import React from "react"
 
-function Search() {
+class Search extends React.Component {
+    render(){
     return(
     <div>
         <div class="container">
@@ -8,7 +9,7 @@ function Search() {
         <button type="submit" className="btn btn-success">Search</button>
     </div>
         </div>
-    )
+    )}
 }
 
 export default Search
