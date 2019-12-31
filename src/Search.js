@@ -1,4 +1,5 @@
 import React from "react"
+import Display from "./Display"
 import axios from "axios"
 
 class Search extends React.Component {
@@ -13,7 +14,7 @@ class Search extends React.Component {
     }
 
     handleClick = (event) => {
-        event.preventDefault()
+        event.preventDefault()    // This prevents page on reloading on clicking submit
         const apiPath = "https://www.googleapis.com/books/v1/volumes?q="
         const apiKey = "AIzaSyBgLSwNtArchOjB__1-kqOoqrUt1d_AwXA"
         var part = "&key="
@@ -21,10 +22,11 @@ class Search extends React.Component {
         var url = apiPath + key + part + apiKey
         axios.get(url)
             .then(response => {
-                console.log(response)
+                this.setState({books: response.data.items})
+                console.log(this.state.books)
             })
             .catch(err => {
-                console.log("Error")
+                alert("Type in the name of book")
             })
     }
 
@@ -44,6 +46,7 @@ class Search extends React.Component {
                 <button type="submit" className="btn btn-success" onClick={this.handleClick}>Search</button>
             </div>
             </form>
+            <Display book={this.state.books}/>
         </div>
     )}
 }
