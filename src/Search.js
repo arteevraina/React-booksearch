@@ -2,6 +2,8 @@ import React from "react"
 import Display from "./Display"
 import axios from "axios"
 
+
+
 class Search extends React.Component {
     constructor(props) {
         super(props)
@@ -16,7 +18,7 @@ class Search extends React.Component {
     handleClick = (event) => {
         event.preventDefault()    // This prevents page on reloading on clicking submit
         const apiPath = "https://www.googleapis.com/books/v1/volumes?q="
-        const apiKey = "AIzaSyBgLSwNtArchOjB__1-kqOoqrUt1d_AwXA"
+        const apiKey = process.env.REACT_APP_GOOGLE_API_KEY
         var part = "&key="
         let key = this.state.query
         var url = apiPath + key + part + apiKey
