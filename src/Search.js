@@ -28,7 +28,7 @@ class Search extends React.Component {
                 console.log(this.state.books)
             })
             .catch(err => {
-                alert("Type in the name of book")
+                console.log("Error")
             })
     }
 

@@ -8,11 +8,11 @@ class Display extends React.Component {
                 this.props.book.map(Book => {
                     return(
                     <div className="row" key = {Book.id}>
-                        <img src = {Book.volumeInfo.imageLinks.smallThumbnail} alt = "book-images" className="bookimg"/>
-                        <a href = {Book.volumeInfo.infoLink}>{Book.volumeInfo.title}</a>
+                        <a href = {Book.volumeInfo.infoLink}><img src = {Book.volumeInfo.imageLinks !== undefined ? Book.volumeInfo.imageLinks.smallThumbnail : ""} 
+                        alt = "book-images"/>
+                        </a>              
                     </div>
                     )
-                    
                 })
             }
             </div>
