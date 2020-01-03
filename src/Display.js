@@ -1,5 +1,5 @@
 import React from "react"
-
+import './Display.css'
 //condition removes undefined error
 
 class Display extends React.Component {
