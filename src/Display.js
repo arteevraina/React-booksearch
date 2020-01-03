@@ -1,5 +1,7 @@
 import React from "react"
 
+//condition removes undefined error
+
 class Display extends React.Component {
     render(){
         return(
@@ -9,8 +11,8 @@ class Display extends React.Component {
                     return(
                     <div className="row" key = {Book.id}>
                         <a href = {Book.volumeInfo.infoLink}><img src = {Book.volumeInfo.imageLinks !== undefined ? Book.volumeInfo.imageLinks.smallThumbnail : ""} 
-                        alt = "book-images"/>
-                        </a>              
+                            alt = "book-images"/>
+                        </a>
                     </div>
                     )
                 })
