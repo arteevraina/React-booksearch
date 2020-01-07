@@ -10,10 +10,16 @@ class Display extends React.Component {
                 this.props.book.map(Book => {
                     return(
                     <div className="row" key = {Book.id}>
-                            <a href = {Book.volumeInfo.infoLink} className="book"><img src = {Book.volumeInfo.imageLinks !== undefined ? Book.volumeInfo.imageLinks.smallThumbnail : ""} 
-                                 alt = "book-images"
-                                 />
-                            </a>
+                        <div className="col-sm-6 col-md-4">
+                            <div className="thumbnail">
+                                <a href = {Book.volumeInfo.infoLink} className="book"><img src = {Book.volumeInfo.imageLinks !== undefined ? Book.volumeInfo.imageLinks.thumbnail : ""} 
+                                     alt = "book-images"
+                                    />
+                                </a>
+                                    <div className="caption"><h3>{Book.volumeInfo.title}</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     )
                 })
