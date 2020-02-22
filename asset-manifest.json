@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-booksearch/static/css/main.b2181f57.chunk.css",
+    "main.js": "/react-booksearch/static/js/main.a1b63860.chunk.js",
+    "main.js.map": "/react-booksearch/static/js/main.a1b63860.chunk.js.map",
+    "runtime-main.js": "/react-booksearch/static/js/runtime-main.ea6700d1.js",
+    "runtime-main.js.map": "/react-booksearch/static/js/runtime-main.ea6700d1.js.map",
+    "static/js/2.f4386778.chunk.js": "/react-booksearch/static/js/2.f4386778.chunk.js",
+    "static/js/2.f4386778.chunk.js.map": "/react-booksearch/static/js/2.f4386778.chunk.js.map",
+    "index.html": "/react-booksearch/index.html",
+    "precache-manifest.b5d520f467e72d1ec3dd1be5e3609b42.js": "/react-booksearch/precache-manifest.b5d520f467e72d1ec3dd1be5e3609b42.js",
+    "service-worker.js": "/react-booksearch/service-worker.js",
+    "static/css/main.b2181f57.chunk.css.map": "/react-booksearch/static/css/main.b2181f57.chunk.css.map",
+    "static/js/2.f4386778.chunk.js.LICENSE": "/react-booksearch/static/js/2.f4386778.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ea6700d1.js",
+    "static/js/2.f4386778.chunk.js",
+    "static/css/main.b2181f57.chunk.css",
+    "static/js/main.a1b63860.chunk.js"
+  ]
+}
